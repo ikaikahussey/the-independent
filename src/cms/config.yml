@@ -17,7 +17,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Relation", name: "relation", widget: "relation"}
+      - {label: "Focus", name: "focus", widget: "relation", collection: "focus", searchFields: ["title", "body"], valueField: "title" }
   - name: "focus" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Focus" # Used in the UI, ie.: "New Post"
     folder: "site/content/focus" # The path to the folder where the documents are stored
@@ -28,7 +28,6 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Relation", name: "relation", widget: "relation"}
   - name: "pages"
     label: "Pages"
     files:
